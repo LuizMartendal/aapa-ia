@@ -16,14 +16,18 @@ A sujeira (tanto a quantidade de sujeira na sala como a posição) deve ser disp
 
 -------- Deixo aqui um modelo para gerar o ambiente no python:------
 
-# Função que exibe o ambiente na tela
+#### Função que exibe o ambiente na tela
 
-#Funciona apenas em ambientes com a biblioteca matplotlib instalada.
+#### Funciona apenas em ambientes com a biblioteca matplotlib instalada.
 
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 import random
-# Função que exibe o ambiente na tela
+
+#### Função que exibe o ambiente na tela
+
 def exibir(matriz):    
     global posAPAx
     global posAPAy
@@ -59,32 +63,61 @@ Responda: A) A sua solução é extensível para um mundo 3 x 3? E para um mundo
 3) CONSTRUÇÃO DO AGENTE  BASEADO EM OBJETIVO
 
 A partir da estrutura do Agente Reativo Simples, aumente o código para transformá-lo em Agentes Baseados em Objetivos, na qual:
+
 o agente tem que limpar toda a sala (função objetivo)
+
 o agente começa a partir quadrado (1, 1)
+
 Escreva uma função de verificação (checkObj(sala)) fora do programa agente que verifica se há sujeira na sala (retorna 1 se tem sujeira, caso contrário retorna 0).
+
 Acrescente a ação de Não Operar "NoOp" na lista de ações do agente e ajuste a ação para "NoOp" uma vez que a sala estiver limpa.
+
 A função de agente deve ser chamada agenteObjetivo(percepcao, objObtido) e deve retornar uma das 6 ações possíveis (5 inicialmente definidas + "NoOp"). O parâmetro objObtido é a saída da função checkObj(sala).
+
 Utilize também uma variável de contador (chamada pontos) que contém o número de passos que o agente leva até atingir o objetivo (inclusive a Ação Aspirar conta 1 ponto). Por exemplo: 
+
 Estado da percepcao: 0 Acao escolhida: abaixo
+
 Estado da percepcao: 0 Acao escolhida: esquerda
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 1 Acao escolhida: aspirar
+
 Estado da percepcao: 0 Acao escolhida: acima
+
 Estado da percepcao: 0 Acao escolhida: esquerda
+
 Estado da percepcao: 0 Acao escolhida: abaixo
+
 Estado da percepcao: 0 Acao escolhida: abaixo
+
 Estado da percepcao: 0 Acao escolhida: abaixo
+
 Estado da percepcao: 1 Acao escolhida: aspirar
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 0 Acao escolhida: acima
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 0 Acao escolhida: acima
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 0 Acao escolhida: abaixo
+
 Estado da percepcao: 0 Acao escolhida: esquerda
+
 Estado da percepcao: 0 Acao escolhida: abaixo
+
 Estado da percepcao: 0 Acao escolhida: direita
+
 Estado da percepcao: 1 Acao escolhida: aspirar
+
 Ponto: -> 22
